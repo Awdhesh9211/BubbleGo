@@ -55,7 +55,7 @@ function changeBubble(idofbubble,idofPara){
           timeRemaining = 60;
           setTimeout(()=>{
           createBubble();
-          },400)
+          },50)
       }else{
           idofbubble.innerHTML=lose;
           lifespan-=1;
