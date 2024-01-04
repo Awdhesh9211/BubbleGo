@@ -10,7 +10,7 @@ const life=document.getElementById('life');
 let currentScore = 0;
 var totalScore = 0;
 let timeRemaining = 60;
-let lifespan=2;
+let lifespan=3;
 const colors = ["green", "blue", "red", "yellow", "pink", "violet"];
 
 //display initial state
@@ -58,12 +58,9 @@ function changeBubble(idofbubble,idofPara){
           },400)
       }else{
           idofbubble.innerHTML=lose;
-          if(lifespan==0){
-            timeRemaining=0
-          }
-          lifespan--;
+          lifespan-=1;
           life.innerHTML="";
-          for(let i=1;i<=lifespan+1;i++){
+          for(let i=1;i<=lifespan;i++){
             life.innerHTML+=`<img style=" caret-color: transparent;cursor:pointer;" src="./assets/lifee.png" title="remains"/>`;
           }
       }
@@ -75,7 +72,7 @@ function changeBubble(idofbubble,idofPara){
 function createBubble() {
   bubblePanel.innerHTML = "";
   life.innerHTML="";
-  for(let i=1;i<=lifespan+1;i++){
+  for(let i=1;i<=lifespan;i++){
     life.innerHTML+=`<img src="./assets/lifee.png" 
     style=" caret-color: transparent;cursor:pointer;" title="remains"/>`;
   }
