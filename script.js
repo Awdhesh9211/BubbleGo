@@ -59,6 +59,7 @@ function changeBubble(idofbubble,idofPara){
       }else{
           idofbubble.innerHTML=lose;
           lifespan-=1;
+          checkLose();
           life.innerHTML="";
           for(let i=1;i<=lifespan;i++){
             life.innerHTML+=`<img style=" caret-color: transparent;cursor:pointer;" src="./assets/lifee.png" title="remains"/>`;
